@@ -43,8 +43,6 @@ export const typeDefs = [`
     # Git repository details
     details: ModuleDetails
     category: ModuleCategory
-    # Compatible Vue releases
-    vue: [String]
     # Useful links
     links: [Link]
     # Special badge (ex: 'official')
@@ -130,8 +128,6 @@ export const typeDefs = [`
     module_categories: [ModuleCategory]
     # Get a single module category by its id
     module_category(id: ID!): ModuleCategory
-    # Get all represented Vue releases
-    vue_releases: [VueRelease]
   }
 
   schema {

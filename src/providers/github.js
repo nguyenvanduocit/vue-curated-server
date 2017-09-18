@@ -26,7 +26,6 @@ const gh = new GitHub({
 
 // Fields parsed from the md file
 const moduleFields = [
-  { key: 'vue', array: true },
   { key: 'links', array: true, map: parseMarkdownLink },
   { key: 'status' },
   { key: 'badge' },
@@ -118,7 +117,6 @@ export async function getModules () {
     const lines = rawSource.split('\n')
     const modules = []
     const categories = []
-    const releases = []
     let lastCategory
 
     for (let line of lines) {
@@ -155,26 +153,15 @@ export async function getModules () {
           ...data,
         }
 
-        data.vue.forEach(vue => {
-          if (!releases.find(r => r.id === vue)) {
-            releases.push({
-              id: vue,
-              label: `Vue ${vue}`,
-            })
-          }
-        })
-
         modules.push(module)
       }
     }
 
     categories.sort((a, b) => a.label < b.label ? -1 : 1)
-    releases.sort((a, b) => b.id < a.id ? -1 : 1)
 
     return {
       modules,
       categories,
-      releases,
     }
   } catch (e) {
     console.error(e)

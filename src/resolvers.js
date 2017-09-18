@@ -40,6 +40,5 @@ export const resolvers = {
     module: (root, { id }, context) => Modules.getModule(id),
     module_categories: (root, args, context) => Modules.getCategories(),
     module_category: (root, { id }, context) => Modules.getCategory(id),
-    vue_releases: (root, args, context) => Modules.getVueReleases(),
   },
 }
