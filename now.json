@@ -1,8 +1,8 @@
 {
-  "name": "vue-curated-server",
-  "alias": "vue-curated-api",
+  "name": "what-to-use-server",
+  "alias": "what-to-use-api",
   "env": {
-    "SOURCE_REPO": "vuejs/vue-curated",
+    "SOURCE_REPO": "nguyenvanduocit/what-to-use",
     "DB_PATH": "/tmp"
   }
 }
