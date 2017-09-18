@@ -1,6 +1,6 @@
-# vue-curated-server
+# what-to-use-server
 
-A GraphQL server for [curated vue packages](https://github.com/nguyenvanduocit/what-to-use), powered by Apollo.
+A GraphQL server for [what to use packages](https://github.com/nguyenvanduocit/what-to-use), powered by Apollo.
 
 Set the `GITHUB_TOKEN` env var with a GitHub OAuth token.
 
